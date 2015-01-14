@@ -1,0 +1,39 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ 
+
+ .article-preview {
+  border-bottom: 2px solid #96081B;
+  padding-bottom: 10px;
+ }
+ .articles-con  {
+  background-color: #96281B;  
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 20px;
+ }
+ .article {
+  color: #F1A9A0;
+ }
+ .article-title {
+  color: white;
+  font-family: 'Sintony', sans-serif;
+ }
+
+ .article-author {
+  padding-left: 4px;
+  font-size: 11px;
+ }
+
+ .article-content {
+  padding: 10px;
+  background-color: #96281B;
+  margin-top: 20px;
+ }
+
+.article-keywords {
+  margin-top: 10px;
+  color: #C5EFF7;
+  font-size: 11px;
+}
