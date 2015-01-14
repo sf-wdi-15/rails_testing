@@ -74,9 +74,10 @@ To run specific specs
 	# Run only model specs
 	rspec spec/models
 	
-	# Run only specs for AccountsController
-	rspec spec/controllers/accounts_controller_spec.rb
+	# Run only specs for ArticlesController
+	rspec spec/controllers/articles_controller_spec.rb
 ```
+
 
 
 ## Rspec Rails Part II
