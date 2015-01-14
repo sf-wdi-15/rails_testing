@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_filter :find_article, except: [:index, :new, :create]
+  before_filter :find_user_article, only: [:destroy, :update, :edit]
   before_filter :logged_in? 
   def index
     @articles = Article.all
@@ -15,11 +15,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.create(article_params)
+    @article = current_user.articles.create(article_params)
     redirect_to article_path(@article.id)
   end
 
   def show
+    find_article
     if @article.content.length > 500
       @article.get_keywords  
     end
@@ -40,9 +41,17 @@ class ArticlesController < ApplicationController
 
 
   private
+    def find_user_article
+      @article = current_user.articles.find_by({id: params[:id]})
+      unless @article
+        redirect_to user_path(current_user)
+      else
+        @article
+      end
+    end
 
     def find_article
-      @article = Article.find(params[:id])
+      @article = Article.find_by({id: params[:id]})
     end
 
     def article_params

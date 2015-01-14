@@ -111,7 +111,7 @@ Thus we use a gem called **FFaker** to give us better test data.
 
 ```
   group :development, :test do
-    gem 'rspec-rails'
+	...
     gem 'ffaker'
   end
 ```

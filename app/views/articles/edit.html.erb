@@ -9,7 +9,10 @@
   <div class="col-xs-10 col-xs-offset-1">
   <%= form_for @article do |f| %>
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1">
+      <div class="col-xs-10 col-xs-offset-1">      
+      <% flash.each do |name, msg| -%>
+       <%= content_tag :div, msg, class: name %>
+      <% end -%>
       <div class="form-group">
         <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
       </div>

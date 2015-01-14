@@ -35,6 +35,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+group :development, :test do
+  gem 'ffaker'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 
