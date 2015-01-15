@@ -2,3 +2,9 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <%= current_user.email %>
+
+<ul>
+  <% @user_articles.each do |article| %>
+    <li><%= article.title %></li>
+  <% end %>
+</ul>
